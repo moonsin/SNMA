@@ -6,5 +6,6 @@ import views
 urlpatterns = patterns('',
                        (r'^$',views.index),
                        (r'^login/$',views.login),
-                       (r'^register',views.register),
+                       (r'^register/$',views.register),
+                       (r'^postlist/(\d+)/$',views.postlist),
                        )

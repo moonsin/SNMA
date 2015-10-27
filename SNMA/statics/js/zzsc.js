@@ -5,22 +5,6 @@ var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
 	if(animating) return false;
-
-	if($("#username").val()=="")
-	{
-		alert("用户名不能为空");
-		return false;
-	}
-	if($("#cpass").val()!=$("#pass").val())
-	{
-		alert("两次密码输入不同");
-		return false;
-	}
-	if($("#cpass").val().length<6)
-	{
-		alert("密码不能小于6位");
-		return false;
-	}
 	animating = true;
 	
 	current_fs = $(this).parent();
