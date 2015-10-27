@@ -42,3 +42,10 @@ def logoutview(request):
 def register(request):
     return render_to_response('register.html')
 
+def postlist(request):
+    blog = models.Blog.objects.get(id=blog_id)      
+    return render_to_response('postlist.html',{
+                                               'blog_obj':blog,
+                                               'user':request.user,
+                                               })
+
