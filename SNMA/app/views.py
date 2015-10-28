@@ -8,10 +8,11 @@ def index(request):
     blog_list = models.Blog.objects.all()
     return render_to_response('index.html', {
                                              'blog_list':blog_list,
-                                             #'user':request.user,
+                                             'user':request.user,
                                              })
 def login(request):
     return render_to_response('login.html')
+   
 
 def acc_login(request):
     username = request.POST.get('username')
@@ -23,9 +24,7 @@ def acc_login(request):
         auth.login(request,user)
         content = '''
         Welcome %s !!!
-
         <a href='/logout/' >Logout</a>
-
          ''' % user.username
         #return HttpResponse(content)
         return HttpResponseRedirect('/')
