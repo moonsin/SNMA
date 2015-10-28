@@ -27,11 +27,13 @@
             <h1>Login</h1>
             <form action="/acc_login/" method="post">
 				<div>
+					<span>{{login_err}}</span>
 					<input type="text" name="username" class="username" placeholder="Username" autocomplete="off" style="font-family:biaotifontfamily;"/>
 				</div>
                 <div>
 					<input type="password" name="password" class="password" placeholder="Password" oncontextmenu="return false" onpaste="return false" style="font-family:biaotifontfamily;" />
                 </div>
+              <!--   <div style="width:400px;margin:20px 0 0 -40px;">{{login_err}}</div> -->
                 <button id="submit" type="submit" style="font-family:biaotifontfamily;">Sign in</button>
             </form>
             <div class="connect">
@@ -64,14 +66,14 @@
 				is_show();
 				return false;
 			}
-			else{
-				var reg = /^[0-9A-Za-z]+$/;
-				if(!reg.exec(u.val()))
-				{
-					$("#ts").html("用户名错误");
-					is_show();
-					return false;
-				}
+			//  else{
+			// 	var reg = /^[0-9A-Za-z]+$/;
+			// 	if(!reg.exec(u.val()))
+			// 	{
+			// 	   	 $("#ts").html("用户名错误");
+			// 	     is_show();
+			// 	     return false;
+			// 	}
 			}
 		});
 		window.onload = function()
