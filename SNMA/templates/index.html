@@ -88,13 +88,29 @@
          <p class="navbar-text biaotizi"  id="biatizix" style="color:black;">SUNSKY NORTHSEA MOON & THE BLESSED GIRL AMIAO</p>
     </div>
 
+{% if user.is_authenticated %}
 
+        <ul class="nav navbar-nav">
+   
+          <li class="dropdown" style="font-family:biaotifontfamily;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp</span>{{user.username}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Blog</a></li>
+                  <li role="separator" class="divider"></li>
+            <li><a href="#">Exit</a></li>
+
+          </ul>
+        </li>
+      </ul>
+
+
+    {% else %}
       <div class="btn-group" role="group" aria-label="..." style="float:right;">
       <a href="/register/"><button type="button" class="btn btn-default navbar-btn navbar-right btn-sm" style="outline:none;font-family:biaotifontfamily;">register</button></a>
      <a href="/login/"><button type="button" class="btn btn-default navbar-btn navbar-right btn-sm" style="outline:none;margin:10px 10px 0 0;font-family:biaotifontfamily;">Sign in</button></a>
       </div>
 
-
+{% endif %}
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
