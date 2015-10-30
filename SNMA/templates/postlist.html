@@ -19,13 +19,14 @@
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/static/css/index-style.css" media="screen" type="text/css" />
-
+<link rel="stylesheet" href="/static/css/postlist.css" media="screen" type="text/css" />
   </head>
 
 
   <body>
 
-  	<nav class="navbar navbar-default navbar-fixed-top" style="line-height:1;z-index:999;" >
+
+<nav class="navbar navbar-default navbar-fixed-top" style="line-height:1;z-index:999;" >
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -73,17 +74,135 @@
          <p class="navbar-text biaotizi"  id="biatizix" style="color:black;">SUNSKY NORTHSEA MOON & THE BLESSED GIRL AMIAO</p>
     </div>
 
+{% if user.is_authenticated %}
 
+        <ul class="nav navbar-nav">
+   
+          <li class="dropdown" style="font-family:biaotifontfamily;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp</span>{{user.username}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="#">Personal Page</a></li>
+            <li><a href="#">Add Blog</a></li>
+                  <li role="separator" class="divider"></li>
+            <li><a href="/logout/">Exit</a></li>
+
+          </ul>
+        </li>
+      </ul>
+
+
+    {% else %}
       <div class="btn-group" role="group" aria-label="..." style="float:right;">
       <a href="/register/"><button type="button" class="btn btn-default navbar-btn navbar-right btn-sm" style="outline:none;font-family:biaotifontfamily;">register</button></a>
      <a href="/login/"><button type="button" class="btn btn-default navbar-btn navbar-right btn-sm" style="outline:none;margin:10px 10px 0 0;font-family:biaotifontfamily;">Sign in</button></a>
       </div>
 
-
+{% endif %}
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+
+
+
+<div  class="quanbu">
+
+
+
+
+
+<ul class="nav nav-tabs" style="font-family:biaotifontfamily;">
+  <li role="presentation" ><a href="#">Add BLog</a></li>
+  <li role="presentation" class="active"><a href="#">BlogList</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+<br><br>
+
+
+    <div class="table-responsive">
+      <table class="table table-striped ">
+          <tr>
+            <td ><strong>#</strong></td>
+            <td class="col-md-8" ><strong>标题</strong></td>
+            <td><strong>阅读</strong></td>
+            <td><strong>评论</strong></td>
+            <td><strong>操作</strong></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="col-md-8" >SunSky Is A SB</td>
+            <td>1565</td>
+            <td>150</td>
+            <td ><span class="caozuoanniu">editor</span>/<span class="caozuoanniu">delete</span></td>
+
+          </tr>
+
+
+
+
+      </table>
+    </div>
+<nav class="text-center">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+</div>
 
 
   </body>
