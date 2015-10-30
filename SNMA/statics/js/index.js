@@ -24,3 +24,11 @@ $(function() {
 
 	var accordion = new Accordion($('#accordion'), false);
 });
+
+
+
+$("#paixufangshi li").click(function(){
+	$("li").removeClass("active");
+	$(this).addClass('active');
+	// alert($(this).html());
+})
