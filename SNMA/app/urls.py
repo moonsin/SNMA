@@ -9,4 +9,5 @@ urlpatterns = patterns('',
                        (r'^register/$',views.register),
                        (r'^postlist/(\d+)/$',views.postlist),
                        (r'^logout/$',views.logoutview),
+                       (r'^add_user/$',views.add_user)
                        )
