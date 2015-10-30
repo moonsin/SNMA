@@ -83,6 +83,9 @@ def add_user(request):
     return render_to_response('index.html')
     
     
-    
+def addblog(request):
+    return render_to_response('addblog.html', {
+                                             'user':request.user,
+                                             })
     
         
