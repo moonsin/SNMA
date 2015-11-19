@@ -8,6 +8,7 @@
 
 <!-- 可选的Bootstrap主题文件（一般不用引入） -->
 <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/static/css/addblog.css">
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="/static/js/jquery.min.js"></script>
@@ -135,20 +136,21 @@ tinymce.init({
 <div class="btn-group" role="group" aria-label="...">
  <div class="btn-group" role="group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
+      <span id="dropclass">Dropdown</span>
       <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Dropdown link</a></li>
-      <li><a href="#">Dropdown link</a></li>
+    <ul class="dropdown-menu dropclass1" >
+       <li><a href="#">技术博客</a></li>
+      <li><a href="#">个人随笔</a></li>
+      <li><a href="#">非原创</a></li>
     </ul>
   </div>
    <div class="btn-group" role="group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
+      <span id="dropclass3">Dropdown</span>
       <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu " id="dropclass2">
       <li><a href="#">Dropdown link</a></li>
       <li><a href="#">Dropdown link</a></li>
     </ul>
@@ -158,52 +160,124 @@ tinymce.init({
   </div>
 
   <div class="form-group">
+    <label for="exampleInputEmail1">acess right of this blog</label>
+    <br>
+    <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Public" checked = "checked" > Public
+  <br><small>Anyone can see this blog</small>
+</label>
+<br>
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Private"> Private
+  <br><small>Nobody can see this blog except you and me</small>
+</label>
+ </div>
+
+  <div class="form-group">
     <label for="exampleInputEmail1">summary(We will use the 200 words ahead your blog as your sunmmary or you can editor it yourself)</label>
    <textarea name="content" style="width:100%;height:150px;"></textarea>
  </div>
 
 <div class="form-group">
     <label for="exampleInputEmail1">Content</label>
-   <textarea name="content" style="width:100%;height:400px;" id="Content"></textarea>
+   <textarea name="content" style="width:90%;height:700px;" id="Content"></textarea>
   </div>
 
 
  <div style="width:120px;margin:10px auto;font-size:13px;font-family:biaotifontfamily;">
  <input class="text-center btn btn-default " type="submit" value="ADD BLOG">
 </div>
-<p class="text-center" style="font-size:16px">tips:Don't(<span style="color:red;">PLEASE</span>) Hei Northsea and Amiao</p>
+<p class="text-center" style="font-size:16px">tips:<del>PLEASE</del>&nbspDon't Hei Northsea and Amiao Here</p>
 
 </form>
 
 
 
-<div style="width:100%;margin:70px 0 0 10px;float:left;font-size:13px;font-family:biaotifontfamily;">
+<div style="font-size:13px;font-family:biaotifontfamily;" >
 
     <div class="row">
-         <div class="col-xs-12 col-md-2" style="font-size:15px;margin:-2px 0 0 15px;">Friends links:</div>
-         <div class="col-xs-4 col-md-1">github</div>
-         <div class="col-xs-4 col-md-1">facebook</div>
-         <div class="col-xs-4 col-md-1">youtube</div>
-         <div class="col-xs-4 col-md-1">instagram</div>
-         <div class="col-xs-4 col-md-1">helloworld</div>
+         <div class="col-xs-12 col-md-2" style="font-size:15px;">Friends links:</div>
+         <div class="col-xs-4 col-md-2">github</div>
+         <div class="col-xs-4 col-md-2">facebook</div>
+         <div class="col-xs-4 col-md-2">youtube</div>
+         <div class="col-xs-4 col-md-2">instagram</div>
+         <div class="col-xs-4 col-md-2">helloworld</div>
     </div>
-    <div class="row" style="margin:10px 0 20px 0;">
-         <div class="col-xs-8 col-md-2" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9">© 2015 SNMA, DB</div>
-         <div class="col-xs-8 col-md-2" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9">About Us</div>
-         <div class="col-xs-8 col-md-1" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9">&nbsp</div>
-          <div class="col-xs-4 col-md-2" style="font-size:23px;margin:-10px 0 0 0;color:red">SNMA</div>
-          <div class="col-xs-8 col-md-1" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9">&nbsp</div>
-          <div class="col-xs-8 col-md-2" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9">  &Touch Us</div>
-          <div class="col-xs-8 col-md-2" style="font-size:13px;margin:-2px 0 0 0;color:#987cb9"> Help</div>
+    <div class="row" style="">
+         <div class="col-xs-4 col-md-2" style="font-size:13px;color:#987cb9">© 2015 SNMA, DB</div>
+         <div class="col-xs-4 col-md-1" style="font-size:13px;color:#987cb9">AboutUs</div>
+         <div class="col-xs-4 col-md-2" style="font-size:13px;color:#987cb9">&nbsp</div>
+          <div class="col-xs-12 col-md-2" style="font-size:23px;color:red;margin:-10px 0 0 0;">SNMA</div>
+             <div class="col-xs-4 col-md-1" style="font-size:13px;color:#987cb9">&nbsp</div>
+           <div class="col-xs-4 col-md-2" style="font-size:13px;color:#987cb9">AboutUs</div>
+          <div class="col-xs-4 col-md-2" style="font-size:13px;color:#987cb9"> Help</div>
 
     </div>
 
 </div>
 
 </div>
-
-
 
 </body>
+<script src="/static/js/addblog.js"></script>
 </html>
+<script type="text/javascript">
 
+var jishublog = new Array(".Net技术","编程语言","软件设计","Web前端","架构设计","手机开发","软件工程","数据库技术","操作系统","其他分类","综合")
+var personalwrite=new Array("生活记录","个人感悟","文学博客","趣事见闻","各类知识","不知道怎么编了","其他")
+var notself=new Array("技术类","文学类","生活常识","冷门知识","有意思的知识","不知道怎么编了","其他")
+
+$(".dropclass1 li a").click(function () {
+  // alert($(this).html());
+  $("#dropclass").html($(this).html());
+      
+    if ($("#dropclass").html()=="技术博客") {
+      $("#dropclass3").html(".Net技术");
+       var jilu="";
+    for(i=0;i<jishublog.length;i++)
+    {
+     
+      jilu+="<li><a href='#'>"+jishublog[i]+"</a></li>";
+    }
+    $("#dropclass2").html(jilu);
+    $("#dropclass2 li a").click(function(){
+         // alert($(this).html())
+      $("#dropclass3").html($(this).html());
+      })
+
+    }
+    else if($("#dropclass").html()=="个人随笔")
+    {     $("#dropclass3").html("生活记录");
+             var jilu="";
+    for(i=0;i<personalwrite.length;i++)
+    {
+     
+      jilu+="<li><a href='#'>"+personalwrite[i]+"</a></li>";
+    }
+    $("#dropclass2").html(jilu);
+    $("#dropclass2 li a").click(function(){
+         // alert($(this).html())
+      $("#dropclass3").html($(this).html());
+      })
+    }
+    else if($("#dropclass").html()=="非原创")
+    { $("#dropclass3").html("技术类");
+             var jilu="";
+    for(i=0;i<notself.length;i++)
+    {
+     
+      jilu+="<li><a href='#'>"+notself[i]+"</a></li>";
+    }
+    $("#dropclass2").html(jilu);
+    $("#dropclass2 li a").click(function(){
+         // alert($(this).html())
+      $("#dropclass3").html($(this).html());
+      })
+    }
+})
+    $("#dropclass2 li a").click(function(){
+    // alert($(this).html())
+      $("#dropclass3").html($(this).html());
+    })
+
+</script>
