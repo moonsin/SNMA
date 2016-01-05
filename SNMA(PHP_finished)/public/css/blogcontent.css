@@ -1,0 +1,23 @@
+.leftkuang{
+	width: 200px;
+
+	float: left;
+	
+}
+.rightkuang{
+	width: 850px;
+
+	float: left;
+	margin: 0 0 0 15px;
+
+}
+.leftkuangkuang{
+		width: 200px;
+       border:1px solid #eee;border-radius:8px;overflow:auto;padding:10px 10px 10px 10px;
+       margin-bottom: 10px;
+}
+.rightkuangkuang{
+	width: 850px;
+     border:1px solid #eee;border-radius:8px;overflow:auto;padding:10px 10px 10px 10px;
+     margin-bottom: 10px;
+}

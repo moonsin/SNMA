@@ -1,0 +1,32 @@
+.topkuang{
+	width:650px;
+  /*  height: 250px;*/
+	border: 1.5px solid #BBB;
+	float: left;
+
+}
+.bomkuang{
+width:650px;
+  /*  height: 250px;*/
+	border: 1.5px solid #BBB;
+	margin: 27px 0 0 0;
+	float: left;
+}
+.rightkuang{
+	width: 300px;
+	height: 220px;
+	float: left;
+	margin: 0 0 0 50px;
+}
+.guanzhuge{
+	margin: 10px 0 0 10px;
+	width: 300px;
+	height: 60px;
+	border-bottom:1px solid #999;
+
+}
+.rightfenge{
+	margin: 10px 0 0 10px;
+	width: 300px;
+	border-bottom:1px solid #999;
+}
