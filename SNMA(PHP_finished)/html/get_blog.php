@@ -12,20 +12,20 @@ $get_action=$_POST['action'];
 
 $uid 	      =	$_SESSION['user_id'] ;
 if(($get_action==null)||$get_action=="time"){
-	$sql = "select * from blog where type=1 order by addtime DESC limit $now_node,$get_num ";
+	$sql = "select blog_id,user_id,title,summary,class1,class2,type,check_num,addtime from blog where type=1 order by addtime DESC limit $now_node,$get_num ";
 }elseif ($get_action=="check"){
-	$sql =	 "select * from blog where type=1 order by check_num DESC limit $now_node,$get_num";
+	$sql =	 "select blog_id,user_id,title,summary,class1,class2,type,check_num,addtime from blog where type=1 order by check_num DESC limit $now_node,$get_num";
 }elseif($get_action=="follow"){
 	if(!$uid){
 		return ;
 	}
-	$sql =	"select * from follow left join blog on follow.blog_id =blog.blog_id where follow.user_id  order by id desc limit $now_node,$get_num";
+	$sql =	"select * from follow left join blog on follow.blog_id =blog.blog_id where follow.user_id=$uid  order by id desc limit $now_node,$get_num";
 
 }elseif ($get_action=="comment") {
 	if(!$uid){
 		return ;
 	}
-	$sql =	"select * from comment left join blog on comment.blog_id =blog.blog_id where follow.user_id  order by id desc  limit $now_node,$get_num";
+	$sql =	"select * from comment left join blog on comment.blog_id =blog.blog_id where comment.user_id=$uid  order by id desc  limit $now_node,$get_num";
 }else{
 	//$pattern =	"/class\d&(class\d)=(.*)/";
 	$class 	      =  $_POST['classcontent'];
@@ -40,10 +40,10 @@ if(($get_action==null)||$get_action=="time"){
 	$class2  =	$class;
 	$now_node =	$now_node+1;
 	if($class1=="class1"){
-		$sql =	"select * from blog where class1 = '{$class2}' order by blog_id desc  limit $now_node,$get_num";
+		$sql =	"select blog_id,user_id,title,summary,class1,class2,type,check_num,addtime from blog where class1 = '{$class2}' order by blog_id desc  limit $now_node,$get_num";
 
 	}elseif($class1=="class2"){
-		$sql =	"select * from blog where class2 = '{$class2}' order by blog_id desc  limit $now_node,$get_num";
+		$sql =	"select blog_id,user_id,title,summary,class1,class2,type,check_num,addtime from blog where class2 = '{$class2}' order by blog_id desc  limit $now_node,$get_num";
 	}
 	//echo $sql;
 	

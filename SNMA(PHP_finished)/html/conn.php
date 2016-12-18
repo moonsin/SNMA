@@ -2,7 +2,7 @@
 //数据库配置
 $DB_NAME = 'localhost';
 $DB_USER = 'root';
-$DB_PSW = '1234567a';
+$DB_PSW = '111555a';
 
 $con = mysql_connect($DB_NAME,$DB_USER,$DB_PSW);
 

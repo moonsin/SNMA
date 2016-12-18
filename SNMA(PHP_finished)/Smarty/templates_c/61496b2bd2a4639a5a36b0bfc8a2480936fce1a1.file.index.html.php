@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2016-01-03 17:44:55
+<?php /* Smarty version Smarty-3.0.6, created on 2016-12-07 16:06:06
          compiled from "../html/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:10362566595688ed97e69472-69915809%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6277681955847c2ee84a5a0-81913512%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '61496b2bd2a4639a5a36b0bfc8a2480936fce1a1' => 
     array (
       0 => '../html/index.html',
-      1 => 1451814203,
+      1 => 1481097918,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10362566595688ed97e69472-69915809',
+  'nocache_hash' => '6277681955847c2ee84a5a0-81913512',
   'function' => 
   array (
   ),
@@ -81,7 +81,7 @@ $_smarty_tpl->decodeProperties(array (
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Great People <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="index.php?action=personal_other&username=moon">Moon</a></li>
-            <li><a href="#">ThreeGold</a></li>
+            <li><a href="index.php?action=personal_other&username=zhouxin">ThreeGold</a></li>
             <li><a href="index.php?action=personal_other&username=尹俊民">TCH.Yin</a></li>
             <li><a href="index.php?action=personal_other&username=SunskyXH">SunSky</a></li>
             <li><a href="#">NorthSea</a></li>
@@ -383,7 +383,7 @@ $("#loadmore").click(function(){
 
       for(i=0;i<datah.length;i++)
       {
-        $("#indexcontent").append('<div style="width:100%;margin:20px 0 0 15px;"><h4>【'+datah[i].class2+'】<a href="blogcontent.php?blog_id='+datah[i].blog_id+'" >'+datah[i].title+'</a></h4><img src="../photo/'+datah[i].user_id+'.png" alt="..." class="img-circle img-responsive" style="width: 70px;height:70px;margin:0 0 5px 20px;float:left;"><div style="margin:0 0 0 15px;float:left;font-size:12px;width:80%;word-break:break-all;">'+datah[i].summary+'</div><div style="width:100%;margin:105px 0 0 0;"><span style="margin:0 10px 0 25px;"><a href="index.php?action=personal_other&username='+datah[i].username+'">'+datah[i].username+'</a></span>发布于<span style="margin:0 0 0 5px;">'+datah[i].addtime+'</span><i class="fa fa-comment-o" style="margin:-5px 0 0 15px;"></i><span>评论('+datah[i].comment_num+')</span><span class="glyphicon glyphicon-hand-up" aria-hidden="true" style="margin:-5px 0 0 15px;"></span> 阅读('+datah[i].check_num+')</div><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=10></div>');
+        $("#indexcontent").append('<div style="width:100%;margin:20px 0 0 15px;"><h4>【'+datah[i].class2+'】<a href="blogcontent.php?blog_id='+datah[i].blog_id+'" >'+datah[i].title+'</a></h4><img src="../photo/'+datah[i].user_id+'.png" alt="..." onerror="this.src=\'../photo/default.jpg\'" class="img-circle img-responsive" style="width: 70px;height:70px;margin:0 0 5px 20px;float:left;"><div style="margin:0 0 0 15px;float:left;font-size:12px;width:80%;word-break:break-all;">'+datah[i].summary+'</div><div style="width:100%;margin:105px 0 0 0;"><span style="margin:0 10px 0 25px;"><a href="index.php?action=personal_other&username='+datah[i].username+'">'+datah[i].username+'</a></span>发布于<span style="margin:0 0 0 5px;">'+datah[i].addtime+'</span><i class="fa fa-comment-o" style="margin:-5px 0 0 15px;"></i><span>评论('+datah[i].comment_num+')</span><span class="glyphicon glyphicon-hand-up" aria-hidden="true" style="margin:-5px 0 0 15px;"></span> 阅读('+datah[i].check_num+')</div><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=10></div>');
       }
   })
 })

@@ -62,7 +62,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Great People <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="index.php?action=personal_other&username=moon">Moon</a></li>
-            <li><a href="#">ThreeGold</a></li>
+            <li><a href="index.php?action=personal_other&username=zhouxin">ThreeGold</a></li>
             <li><a href="index.php?action=personal_other&username=尹俊民">TCH.Yin</a></li>
             <li><a href="index.php?action=personal_other&username=SunskyXH">SunSky</a></li>
             <li><a href="#">NorthSea</a></li>
@@ -349,7 +349,7 @@ $("#loadmore").click(function(){
 
       for(i=0;i<datah.length;i++)
       {
-        $("#indexcontent").append('<div style="width:100%;margin:20px 0 0 15px;"><h4>【'+datah[i].class2+'】<a href="blogcontent.php?blog_id='+datah[i].blog_id+'" >'+datah[i].title+'</a></h4><img src="../photo/'+datah[i].user_id+'.png" alt="..." class="img-circle img-responsive" style="width: 70px;height:70px;margin:0 0 5px 20px;float:left;"><div style="margin:0 0 0 15px;float:left;font-size:12px;width:80%;word-break:break-all;">'+datah[i].summary+'</div><div style="width:100%;margin:105px 0 0 0;"><span style="margin:0 10px 0 25px;"><a href="index.php?action=personal_other&username='+datah[i].username+'">'+datah[i].username+'</a></span>发布于<span style="margin:0 0 0 5px;">'+datah[i].addtime+'</span><i class="fa fa-comment-o" style="margin:-5px 0 0 15px;"></i><span>评论('+datah[i].comment_num+')</span><span class="glyphicon glyphicon-hand-up" aria-hidden="true" style="margin:-5px 0 0 15px;"></span> 阅读('+datah[i].check_num+')</div><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=10></div>');
+        $("#indexcontent").append('<div style="width:100%;margin:20px 0 0 15px;"><h4>【'+datah[i].class2+'】<a href="blogcontent.php?blog_id='+datah[i].blog_id+'" >'+datah[i].title+'</a></h4><img src="../photo/'+datah[i].user_id+'.png" alt="..." onerror="this.src=\'../photo/default.jpg\'" class="img-circle img-responsive" style="width: 70px;height:70px;margin:0 0 5px 20px;float:left;"><div style="margin:0 0 0 15px;float:left;font-size:12px;width:80%;word-break:break-all;">'+datah[i].summary+'</div><div style="width:100%;margin:105px 0 0 0;"><span style="margin:0 10px 0 25px;"><a href="index.php?action=personal_other&username='+datah[i].username+'">'+datah[i].username+'</a></span>发布于<span style="margin:0 0 0 5px;">'+datah[i].addtime+'</span><i class="fa fa-comment-o" style="margin:-5px 0 0 15px;"></i><span>评论('+datah[i].comment_num+')</span><span class="glyphicon glyphicon-hand-up" aria-hidden="true" style="margin:-5px 0 0 15px;"></span> 阅读('+datah[i].check_num+')</div><HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=10></div>');
       }
   })
 })
